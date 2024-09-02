@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import React from 'react'
 import { useRouter } from "next/navigation";
 
@@ -11,11 +12,14 @@ function Registro() {
          <div style={{ minWidth: '30%' }}>
             <div className="shadow-lg flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white">
                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                  <img
-                     alt="Your Company"
-                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                     className="mx-auto h-10 w-auto"
-                  />
+                  <div className="flex justify-center">
+                     <Image
+                        src='/login-user.gif'
+                        alt="login"
+                        width={60}
+                        height={60}
+                     />
+                  </div>
                   <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                      Crear nueva cuenta
                   </h2>
