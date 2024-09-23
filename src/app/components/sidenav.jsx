@@ -18,6 +18,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Image from "next/image";
+import logo from '../../../public/logo-panel.jpg';
 
 const drawerWidth = 240;
 
@@ -43,10 +45,20 @@ function Sidenav(props) {
 
    const drawer = (
       <div>
-         <Toolbar />
+         <Toolbar>
+            <Image 
+               src={logo}
+               width={50}
+               height={50}
+               className='-ml-2 mr-2'
+            />
+            <Typography variant='h6' noWrap component='div'>
+               Menú
+            </Typography>
+         </Toolbar>
          <Divider />
          <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Panel', 'Analítica', 'Send email', 'Drafts'].map((text, index) => (
                <ListItem key={text} disablePadding>
                   <ListItemButton>
                      <ListItemIcon>
@@ -84,6 +96,8 @@ function Sidenav(props) {
             sx={{
                width: { sm: `calc(100% - ${drawerWidth}px)` },
                ml: { sm: `${drawerWidth}px` },
+               bgcolor: '#fff',
+               color: '#2f2f2f'
             }}
          >
             <Toolbar>
@@ -97,7 +111,7 @@ function Sidenav(props) {
                   <MenuIcon />
                </IconButton>
                <Typography variant="h6" noWrap component="div">
-                  Responsive drawer
+                  Panel de Escritorio
                </Typography>
             </Toolbar>
          </AppBar>
